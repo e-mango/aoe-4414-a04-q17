@@ -1,4 +1,4 @@
-# script_name.py
+# ymdhms_to_jd.py
 #
 # Usage: python3 ymdhms_to_jd.py year month day hour minute second
 #  This converts from year, month, day, hour, minute, second to fractional Julian date
