@@ -47,11 +47,10 @@ else:
         'python3 ymdhms_to_jd.py year month day hour minute second'
     )
     exit()
-# write script below this line
-
-JD = math.floor(day-32075 + 1461*(year+4800+(month-14)/12)/4 + 367*(month-2-(month-14)/12*12)/12 - 3*((year+4900+(month-14)/12)/100)/4)
+    
+JD = (day - 32075 + int(1461 * (year + 4800 + int((month - 14) / 12)) / 4)+ int(367 * (month - 2 - int((month - 14) / 12) * 12) / 12) - int(3 * int((year + 4900 + int((month - 14) / 12)) / 100) / 4))
 JD_midnight = JD - 0.5
-D_frac = ((second + 60*(minute+60*hour))/86400)
+D_frac = (second + 60 * (minute + 60 * hour)) / 86400
 jd_frac = JD_midnight + D_frac
 
 print(jd_frac)
